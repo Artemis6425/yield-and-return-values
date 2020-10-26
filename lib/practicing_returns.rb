@@ -2,10 +2,12 @@ require 'pry'
 
 def hello(array)
   i = 0
+  set = []
   while i < array.length
-    yield(array[i])
+    set << yield(array[i])
     i += 1
   end
+  set
 end
 
 
